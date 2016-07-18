@@ -27,14 +27,12 @@ class TrimpPerHourView extends Ui.SimpleDataField {
         userRestHR = pUserRestHR;
 
         SimpleDataField.initialize();
-        label = "TRIMP/Hr";
+        label = "TRIMP/h [" + userRestHR + "-" + userMaxHR + "]";
 
         // Female athlete? If yes adapt gender mulpiplier
         if (UserProfile.getProfile().gender == UserProfile.GENDER_FEMALE) {
             genderMultiplier = 1.67;
         }
-
-
 
         if (UserProfile.getCurrentSport() == UserProfile.HR_ZONE_SPORT_BIKING || UserProfile.getCurrentSport() == UserProfile.HR_ZONE_SPORT_RUNNING) {
             staticSport = false;

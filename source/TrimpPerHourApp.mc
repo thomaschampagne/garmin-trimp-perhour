@@ -15,8 +15,9 @@ class TrimpPerHourApp extends App.AppBase {
 
     //! onStart() is called on application start up
     function onStart() {
+
         System.println("onStart() called");
-        
+
         // Getting MAX hr from end value of last zone
         var hrZones = UserProfile.getHeartRateZones(UserProfile.getCurrentSport());
 
@@ -40,5 +41,4 @@ class TrimpPerHourApp extends App.AppBase {
         System.println("getInitialView() called");
         return [new TrimpPerHourView(userMaxHR, userRestHR)];
     }
-
 }
